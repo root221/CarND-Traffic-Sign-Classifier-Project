@@ -89,13 +89,16 @@ My final model consisted of the following layers:
 | Input         		| 32x32x3 RGB image   							| 
 | Convolution 5x5     	| 1x1 stride, valid padding, outputs 32x32x30 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 14x14x30 				|
+| Max pooling	      	| 2x2 stride, outputs 14x14x30 				    |
 | Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x60   |
-| RELU           		|        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
+| RELU           		|        									    |
+| Max pooling			| 2x2 stride, outputs 5x5x60					|
+| Fully connected		| inputs 1500, outputs 240						|
+| RELU           		|        									    |
+| Fully connected		| inputs 240, outputs 84						|
+| RELU           		|        									    |
+| Fully connected       | inputs 84, outputs 10       				    |
+
 
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
@@ -105,18 +108,18 @@ To train the model, I used an AdamOptimizer, and the batch size is 128, the numb
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
+* training set accuracy of 0.998.
+* validation set accuracy of 0.958. 
 * test set accuracy of 0.95.
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 
-The first architecture was Lenet since it worked pretty well on mnist dataset.
+    The first architecture was Lenet since it worked pretty well on mnist dataset.
 
 * What were some problems with the initial architecture?
 
-The performance was not good enough.
+    The performance was not good enough.
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
 
@@ -124,7 +127,7 @@ The performance was not good enough.
 
 * Which parameters were tuned? How were they adjusted and why? 
 
-I modified the sigma to 0.05, but I didn't know why. The performance just became better.
+    I modified the sigma to 0.05, but I didn't know why. The performance just became better.
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
