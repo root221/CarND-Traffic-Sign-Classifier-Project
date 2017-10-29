@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-
+[image1]: ./examples/hist.png "Augmented Image"
 [image3]: ./preview/0__0_1101.jpg "Augmented Image"
 [image4]: ./test_images/test4.jpg "Traffic Sign 1"
 [image5]: ./test_images/test11.jpg "Traffic Sign 2"
@@ -52,7 +52,7 @@ signs data set:
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing the distribution of classes in the test set.
 
 ![alt text][image1]
 
