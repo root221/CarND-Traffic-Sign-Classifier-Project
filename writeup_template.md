@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/hist.png "Augmented Image"
-[image3]: ./preview/0__0_1101.jpg "Augmented Image"
+[image3]: ./examples/augmentation.jpg "Augmented Image"
 [image4]: ./test_images/test4.jpg "Traffic Sign 1"
 [image5]: ./test_images/test11.jpg "Traffic Sign 2"
 [image6]: ./test_images/test8.jpg "Traffic Sign 3"
